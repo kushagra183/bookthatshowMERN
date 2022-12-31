@@ -88,6 +88,13 @@ useEffect( ()=>{
 fetchData();
 },[])
 
+//this function will be called when the clear button will be clicked
+//it will make an axios DELETE request 
+const handleDelete = async () =>{
+  await axios.delete("https://bookthatshow.cyclic.app/api/booking").then(res=>res.data).then(setFetched('no previous booking found')).catch((err)=>console.log(err));
+  }
+  
+
 console.log(fetched);
 return (
     <div className="mainContainer">
@@ -107,6 +114,9 @@ return (
        </div>
     <div >
     <LastBooking data={fetched} />
+    <div className="btn2">
+        <button onClick={handleDelete} className="submit-btn">Clear</button>
+      </div>
      </div> 
     </div>
     </div>

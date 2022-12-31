@@ -1,4 +1,5 @@
 import React from 'react'
+import Loader from './loader/loader'
 
 
 //lastBooking component function
@@ -6,9 +7,10 @@ const LastBooking = (props) => {
   return (
     <div className='containerBooking'>
 
-      
+      {/**if fetched data is undefined then show loading spinner else if fetched data = "no previous booking found" then show No booking found else show the fetched data */}
+    {!props.data?<Loader/>: 
    
-     {!props.data?<div className='noBooking'><h3>No Booking found</h3></div>:<>
+    props.data==="no previous booking found"?<div className='noBooking'><h3>No Booking found</h3></div>:<>
      <h2 style={{marginBottom:"10px"}}>Last Booking Details:</h2>
       
       <h3>Seats:</h3>
