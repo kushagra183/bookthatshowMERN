@@ -7,7 +7,7 @@ const Slot = (props) => {
 
         {/**mapping over slot data and changing the background color of the slot option to orange*/}
       {props.data.map((el,i)=>(
-      <h3   className='element' key={i}>{el}</h3>))}
+      <h3 style={{backgroundColor:`${props.movieData === el?'orange':"white"}`}} onClick={()=>props.slotSelector(el)} className='element' key={i}>{el}</h3>))}
     </div>
   )
 }
