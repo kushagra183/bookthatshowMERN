@@ -107,3 +107,29 @@ font-family: sans-serif;
  padding:10px;
  margin: 5px 0;
 }
+/*css when screen width becomes less than or equal to 900 px*/
+
+@media screen and (max-width: 900px) {
+  .mainContainer{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+  }
+  
+     .container{
+        width: 80vw;
+     }
+     .containerBooking{
+        width: 80vw;
+     }
+    .btn{
+        width: 80vw;
+     }
+     .btn2{
+        width:80vw;
+     }
+     .noBooking{
+        width:80vw;
+     }
+  }
