@@ -6,7 +6,7 @@ const Movie = (props) => {
         <h2>Select a movie</h2>
         {/**mapping over movie data and changing the background color of the movie option to orange   */}
       {props.data.map((el,i)=>(
-      <h3  className='element' key={i}>{el}</h3>))}
+      <h3 style={{backgroundColor:`${props.movieData === el?'orange':"white"}`}} onClick={()=>props.movieSelector(el)} className='element' key={i}>{el}</h3>))}
     </div>
   )
 }
