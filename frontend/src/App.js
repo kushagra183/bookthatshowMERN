@@ -1,6 +1,9 @@
 
 import './App.css';
 import img from "./components/images/bts.png"
+import data from "./components/data"
+import Movie from './components/Movie';
+import Slot from './components/Slot';
 
 
 function App() {
@@ -12,8 +15,8 @@ function App() {
    
     <div className="AppContainer">      
       <div className="containerOuter">        
-       {/**movie */}
-       {/**slots */}
+      <Movie data={data.movies}/>  
+      <Slot  data={data.slots}/>
        {/**seats */}
    
  {/**submit btn */}
