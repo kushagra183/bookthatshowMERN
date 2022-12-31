@@ -9,7 +9,7 @@ A movie booking application 📱 built using MERN stack where you can select the
 or click here: https://bookthatshow.netlify.app/
 ---------------
 
-##API link:
+## API link:
 https://bookthatshow.cyclic.app/api/booking
 
 
